@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="py-5 container">
+        <div class="row col-6 mx-auto">
+            <h1>Calculadora</h1>
+            <form action="#" class="py-4" id="calcular">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <label class="form-label">Altura</label>
+                        <input type="number" step="0.1" value="1.5" required class="form-control" name="altura">
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <label class="form-label">Largura</label>
+                        <input type="number" step="0.1" required class="form-control" name="largura">
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <label class="form-label">Comprimento</label>
+                        <input type="number" step="0.1" required class="form-control" name="comprimento">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary mt-3">Calcular</button>
+                    </div>
+                </div>
+            </form>
+            <div id="resultado" style="display: none;">
+                <table class="table table-bordered text-center">
+                    <tr>
+                        <th class="altura"></th>
+                        <th class="comprimento"></th>
+                        <th class="altura"></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <th class="largura"></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <th class="altura"></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <th class="largura"></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <th class="altura"></th>
+                    </tr>
+                </table>
+
+                <div id="area" class="alert alert-primary"></div>
+                <div id="corte" class="alert alert-primary"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
