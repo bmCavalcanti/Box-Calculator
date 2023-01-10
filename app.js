@@ -22,10 +22,67 @@ $(document).ready(function() {
         $(".altura").css("height", altura + "cm")
         $(".largura").css("height", largura + "cm")
 
-        $("#area").html(`Área total: ${larguraTotal}cm x ${alturaTotal}cm`);
+        var larguraFolha = 21;
+        var alturaFolha = 29.7;
+
+        var corteX = "", corteY = "";
+        var y = 0, x = 0;
+        var loopY = 0, loopX = 0;
+
+        while (x <= larguraFolha && (x + (altura*2) + comprimento) <= larguraFolha) {
+
+            loopX++;
+
+            x += altura;
+
+            corteX += x + " - ";
+
+            x += comprimento;
+
+            corteX += x + " - ";
+
+            x += altura;
+
+            corteX += x + "<br>";
+        }
+
+        while (y <= alturaFolha && (y + (altura*2) + (comprimento * 3)) <= alturaFolha) {
+
+            loopY++;
+
+            y += altura;
+
+            corteY += y + " - ";
+
+            y += comprimento;
+
+            corteY += y + " - ";
+
+            y += altura;
+
+            corteY += y + " - ";
+
+            y += comprimento;
+
+            corteY += y + " - ";
+
+            y += altura;
+
+            corteY += y + "<br>";
+        }
+
+        console.log(corteY);
+
+        $("#area").html(`
+            Área total: ${x}cm x ${y}cm
+            <br>
+            Área por caixa: ${larguraTotal}cm x ${alturaTotal}cm
+            <br>
+            Quantidade de caixas por folha: ${loopX * loopY} unidades.
+        `);
         $("#corte").html(`
-            x = ${altura} - ${altura + comprimento} - ${altura * 2 + comprimento} <br>
-            y = ${altura} - ${altura + largura} - ${(altura * 2) + largura} - ${(altura * 2) + (largura * 2)} - ${(altura * 3) + (largura * 2)} <br>
+            X <br> ${corteX} <br>
+            Y <br> ${corteY} <br>
         `);
     });
 });
