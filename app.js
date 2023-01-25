@@ -46,7 +46,7 @@ $(document).ready(function() {
             corteX += x + "<br>";
         }
 
-        while (y <= alturaFolha && (y + (altura*2) + (comprimento * 3)) <= alturaFolha) {
+        while (y <= alturaFolha && (y + (altura*3) + (comprimento * 2)) <= alturaFolha) {
 
             loopY++;
 
@@ -71,14 +71,12 @@ $(document).ready(function() {
             corteY += y + "<br>";
         }
 
-        console.log(corteY);
-
         $("#area").html(`
             Área total: ${x}cm x ${y}cm
             <br>
             Área por caixa: ${larguraTotal}cm x ${alturaTotal}cm
             <br>
-            Quantidade de caixas por folha: ${loopX * loopY} unidades.
+            Quantidade de caixas por folha: ${loopX * loopY} ${ (loopX * loopY) >= 2 ? `unidades` : `unidade` }.
         `);
         $("#corte").html(`
             X <br> ${corteX} <br>
